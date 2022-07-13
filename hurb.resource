@@ -1,6 +1,6 @@
 *** Variables ***
-${SITE}                   https:https://www.hurb.com/br?cmp=285992&prm=515&gclid=CjwKCAjwt7SWBhAnEiwAx8ZLavdfBW42GGv4F7ZdoBTqPPl9zpqbXodimPtgEt856M7D1qIUf6BEeBoCzlgQAvD_BwE
-${NAVEGADOR}              Chrome 
+${SITE}                  https://www.hurb.com/br
+${NAVEGADOR}             Chrome 
 ${PACOTES}               xpath=//*[@id="__next"]/div[1]/div[2]/div/div/div[1]/div/div/button[2] 
 ${ROMA}                  xpath=//*[@id="__next"]/div[2]/section[1]/div/div/a[1]/img
 ${SELECIONAR_PACOTE}     xpath=//*[@id="__next"]/div/main/div[3]/aside/div/div/div[2]
@@ -11,11 +11,16 @@ ${CONFIRMAR}             xpaath=/html/body/div[14]/div/div/div/footer/button[2]
 ${FORMA_PAG}             xpath=//*[@id="paymentMethods"]/ul/li[3]
 ${AC_TERM}               xpath=//*[@id="user-agreement"]/section
 ${PAGAMENTO}             xpath=//*[@id="purchase-confirmation"]/div[2]
+${COOKIES}               xpath=//*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"]
 
 ***Keywords***          
 Abrir o novo site da hurb
-  Open Browser         ${SITE}     ${NAVEGADOR}
+  Open Browser          ${SITE}     ${NAVEGADOR}
   Maximize Browser Window
+
+Clicar em aceitar cookies 
+Execute Javascript window.scroll() 
+ wait and Click   ${COOKIES}
 
 Clicar em “Pacotes”
  Execute Javascript    window.scroll()

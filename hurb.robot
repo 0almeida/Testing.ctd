@@ -1,7 +1,7 @@
 ***Settings***
 
 Library   SeleniumLibrary
-Resource        .prova/hurb.resource
+Resource        ./hurb.resource
 Test Setup      Abrir o novo site da hurb
 Test Teardown   Closed Browser
 
@@ -9,9 +9,10 @@ Test Teardown   Closed Browser
 validação de compra de pacote de viagens
  Permitir e aceitar cookies
  Clicar em “Pacotes”
- Clicar o "Pacote de Viagem - Roma + Paris + Amsterdam - 2024"
+ Clicar no "Pacote de Viagem - Roma + Paris + Amsterdam - 2024"
  Escolher pacote
  Selecionar Partida/cidade
+ Selecionar quantidade de diarias
  Selecionar Data escolhida + diarias
 
 validação de pagamento
